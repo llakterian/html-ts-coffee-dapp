@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy me Coffee</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      margin-top: 30px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    input {
+      margin: 5px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .form-group {
+      margin: 20px 0;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Buy Me Coffee dApp</h1>
+  
+  <div class="container">
+    <button id="connectButton">Connect</button>
+    <button id="balanceButton">Get Balance</button>
+    <button id="withdrawButton">Withdraw</button>
+    
+    <!-- Form - "buy coffee" or "fund" -->
+    <div class="form-group">
+      <label for="ethAmount">ETH Amount</label>
+      <input id="ethAmount" placeholder="0.1" type="text" />
+      <button type="button" id="fundButton">Buy Coffee</button>
+    </div>
+    
+    <div id="status"></div>
+  </div>
+
+ <script src="./constants-js.js"></script>
+<script src="./index-ts.js"></script>
+
+</body>
+</html>
